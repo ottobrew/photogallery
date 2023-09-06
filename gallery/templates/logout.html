@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Thank you for stopping by.</h1>
+
+<div class="d-flex">
+    <div class="px-4 py-2">
+        <a href="{% url 'gallery' %}" class="btn btn-primary ">Return to Gallery</a>
+    </div>
+    <div class="px-4 py-2">
+        <a href="{% url 'login' %}" class="btn btn-primary ">Login Again</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="alert alert-danger" role="alert">
+    Are you sure you want to delete "{{ photo.title }}"?
+</div>
+<form method="POST" class="my-4">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Yes, delete photo</button>
+</form>
+<a href="{% url 'gallery' %}" class="btn btn-primary">No, keep photo</a>
+{% endblock %}
